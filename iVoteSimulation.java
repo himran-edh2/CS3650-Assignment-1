@@ -60,22 +60,22 @@ public class iVoteSimulation implements VotingInterface {
                 numberOfAnswers = rand.nextInt(4) + 1;
                 for (int y = 0; y < numberOfAnswers; y++) {
                     do {
-                    c = (char)(rand.nextInt(4) + 'A');
-                    studentInfo.put(student[x], Arrays.asList(c));
-                    reTry = rand.nextBoolean();
-                } while (reTry == true);
-                }
-                if (studentInfo.containsValue(Arrays.asList('A'))) {
-                    aAnswer++;
-                }
-                if (studentInfo.containsValue(Arrays.asList('B'))) {
-                    bAnswer++;
-                }
-                if (studentInfo.containsValue(Arrays.asList('C'))) {
-                    cAnswer++;
-                }
-                if (studentInfo.containsValue(Arrays.asList('D'))) {
-                    dAnswer++;
+                        c = (char)(rand.nextInt(4) + 'A');
+                        studentInfo.put(student[x], Arrays.asList(c));
+                        reTry = rand.nextBoolean();
+                        if (c == 'A') {
+                            aAnswer++;
+                        }
+                        if (c == 'B') {
+                            bAnswer++;
+                        }
+                        if (c == 'C') {
+                            cAnswer++;
+                        }
+                        if (c == 'D') {
+                            dAnswer++;
+                        }
+                    } while (reTry == true);
                 }
             }
         }
@@ -86,16 +86,16 @@ public class iVoteSimulation implements VotingInterface {
                     studentInfo.put(student[x], Arrays.asList(c));
                     reTry = rand.nextBoolean();
                 } while (reTry == true);
-                if (studentInfo.containsValue(Arrays.asList('A'))) {
+                if (c == 'A') {
                     aAnswer++;
                 }
-                if (studentInfo.containsValue(Arrays.asList('B'))) {
+                if (c == 'B') {
                     bAnswer++;
                 }
-                if (studentInfo.containsValue(Arrays.asList('C'))) {
+                if (c == 'C') {
                     cAnswer++;
                 }
-                if (studentInfo.containsValue(Arrays.asList('D'))) {
+                if (c == 'D') {
                     dAnswer++;
                 }
             }
